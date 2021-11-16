@@ -1,5 +1,8 @@
 # Schwarzthal Data Enginner Assignment
 
+*Truong Nguyen*
+*Innopolis University*
+
 ## Set up a virtual enviroment to run scrapy
 - Create a virtual environment
 - cd to the directory where requirements.txt is located
