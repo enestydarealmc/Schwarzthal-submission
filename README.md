@@ -13,3 +13,7 @@
 ## Run the crawler
 - Cd into the "spiders" folder and run the crawler
 - > srapy crawl schwarzthal
+
+## Results
+- will be saved into "results.json" file
+- a sample result is included into the repo
