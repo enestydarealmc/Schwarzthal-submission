@@ -5,6 +5,7 @@
 
 ## Set up a virtual enviroment to run scrapy
 - Create a virtual environment
+- Activate your enviroment: cd to scripts folder and run "activate" file
 - cd to the directory where requirements.txt is located
 - run:
 > pip install -r requirements.txt
