@@ -14,7 +14,7 @@ class SchwarzthalSpider(scrapy.Spider):
     ]
     results = {}
     counter = 0
-    NUM_COMPANY = 1000
+    NUM_COMPANY = 1100
 
     def __init__(self):
         dispatcher.connect(self.spider_closed, signals.spider_closed)
@@ -25,7 +25,6 @@ class SchwarzthalSpider(scrapy.Spider):
         companies = response.css("div.item > .row > .col-sm-12 > .name > a::attr(href)")
         for company in companies:
             if self.counter < self.NUM_COMPANY:
-                print("Gonna crawl %s" % company.get())
                 yield scrapy.Request(company.get(), self.parseInnerPage)
                 time.sleep(1)
 
@@ -137,6 +136,7 @@ class SchwarzthalSpider(scrapy.Spider):
 
         company_data["name"] = company_name
         if self.counter < self.NUM_COMPANY:
+            print("Current counter:", self.counter)
             self.counter += 1
         self.results[self.counter] = company_data
 
